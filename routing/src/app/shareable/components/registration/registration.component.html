@@ -1,0 +1,27 @@
+<div class="regForm">    
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Ex. Deepak" value="" [(ngModel)]="fname" [ngModelOptions]="{standalone: true}">
+         
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Ex. Sharma" value="" [(ngModel)]="lname"  name="firstName">
+          </mat-form-field>
+        <mat-form-field class="example-full-width"> 
+    <mat-label>Email</mat-label> 
+    <input type="email" matInput
+           placeholder="Ex. pat@example.com" [(ngModel)]="email"  name="firstName">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="psw"  name="firstName">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-button color="primary" (click)="registration()">  Register </button>
+  <h3>Already have an account? <a href="#">Login</a> </h3>
+      </form> 
+</div>      
